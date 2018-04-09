@@ -1,0 +1,24 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.container .item{
+  order: 1;
+  height:400px;
+  background-color: aquamarine;
+  flex-grow: 0;
+  width:100px;
+  border: 1px solid red;
+}
+
+.container .item-content{
+  order: 1;
+  height:400px;
+  background-color: yellowgreen;
+  flex-grow: 3;
+  width:auto;
+  border: 1px solid blue;
+}

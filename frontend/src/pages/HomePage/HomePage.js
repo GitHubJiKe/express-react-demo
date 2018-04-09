@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styles from './HomePage.css'
-import { MyHeader, MyMenu, UserContentView, DataContentView } from '../../components';
+import { MyHeader, MyMenu, UserContentView, DataContentView, FlexContainerView, FlexItem } from '../../components';
 import { Layout, Menu, Icon } from 'antd';
 const { Sider, Content } = Layout;
 const contentStyle = {
@@ -52,7 +52,11 @@ class HomePage extends Component {
       case "2":
         return <DataContentView></DataContentView>
       case "3":
-        return <div>报表中心内容区域</div>
+        return <FlexContainerView>
+          <FlexItem />
+          <FlexItem cssKey="-content" />
+          <FlexItem />
+        </FlexContainerView>
       default:
         return <UserContentView></UserContentView>
     }
